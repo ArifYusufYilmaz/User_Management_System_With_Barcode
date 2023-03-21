@@ -1,0 +1,136 @@
+﻿<Window x:Class="WpfAppExample1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppExample1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="420" Margin="0,0,-0.4,0" VerticalAlignment="Bottom">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Center">
+            <Button x:Name="btnPage4"  Content="page1" Click="btnPage4_Click"></Button>
+            <Button x:Name="btnPage5"   Content="page2" Click="btnPage5_Click"></Button>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,100,0,0"></Frame>
+
+        <Grid Margin="0,40,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="lbl1" 
+               Grid.Column="0"
+               Grid.Row="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="25"
+               Content="LABEL1">
+        </Label>
+        <Label x:Name="lbl2" 
+               Grid.Column="1"
+               Grid.Row="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="25"
+               Content="LABEL2">
+        </Label>
+        <Label x:Name="lbl3" 
+               Grid.Column="2"
+               Grid.Row="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="25"
+               Content="LABEL3">
+        </Label>
+        <TextBox x:Name="tbx1"
+                 Grid.Row="1"
+                 Grid.Column="0"
+                 Text="Place Holder"
+                 FontSize="25"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 >
+        </TextBox>
+        <TextBox x:Name="tbx2"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Text="kutu boyutunu sabitlestirmek??"
+                 FontSize="25"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 >
+        </TextBox>
+        <TextBlock x:Name="tbk1"
+                   Grid.Column="2"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="TextBlock"
+                   FontSize="20">
+            
+        </TextBlock>
+        <ComboBox x:Name="cbx1"
+                  Grid.Column="3"
+                  Grid.Row="0"
+                  >
+            <ComboBoxItem IsSelected="True" Foreground="Blue">cbx1Message</ComboBoxItem>
+            <ComboBoxItem Foreground="Yellow">cbx1Message2</ComboBoxItem>
+            <ComboBoxItem Foreground="Green">cbx1Message3</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="cbx2"
+                  Grid.Column="3"
+                  Grid.Row="1"
+                  >
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="30" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                            >
+                    </Image>
+                    <TextBlock>dasjdhbasdjbashd</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem IsSelected="True">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="30" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                            >
+                    </Image>
+                    <TextBlock>dasjdhbasdjbashd</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+            <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel  Orientation="Vertical">
+                    <Button Width="30" Height="10" FontSize="5">v1</Button>
+                    <Button Width="30" Height="10" FontSize="5">v2</Button>
+                    <Button Width="30" Height="10" FontSize="5">v2</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,2,2,0">
+                    <Button Width="30" Height="10" FontSize="5">h1</Button>
+                    <Button Width="30" Height="10" FontSize="5">h2</Button>
+                    <Button Width="30" Height="10" FontSize="5">h3</Button>
+                </StackPanel>
+            </StackPanel>
+            <Button x:Name="btn1" Grid.Column="0" Grid.Row="2" Margin="30" Content="Login"></Button>
+            <Button x:Name="btn2" Grid.Column="1" Grid.Row="2" Margin="30" Content="Register"></Button>
+            <Button x:Name="btn3" Grid.Column="2" Grid.Row="2" Margin="30" Content="Cancel"></Button>
+        </Grid>
+       <!--* List View Item!
+        Button visibility-->
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Page x:Class="WpfAppExample1.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppExample1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock x:Name="txtSelectFile" >Select File</TextBlock>
+            <Button x:Name="openFile" Click="openFile_Click"
+                    Width="100"
+                    Height="50">Open File</Button>
+            <Button x:Name="AddByExcel"
+                    Click="AddByExcel_Click"
+                    Width="100"
+                    Height="50"
+                    IsEnabled="False" >Add By Excel</Button>
+
+        </StackPanel>
+        <DataGrid x:Name="dg1"
+                  Grid.Row="1"  
+                  AutoGenerateColumns="True"
+                  ></DataGrid>
+        
+    </Grid>
+</Page>
